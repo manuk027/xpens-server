@@ -16,14 +16,20 @@ const PORT = process.env.PORT || 5001;
 
 // Middleware
 const allowedOrigins = process.env.CLIENT_URL
-  ? process.env.CLIENT_URL.split(',').map(o => o.trim())
+  ? process.env.CLIENT_URL.split(',').map(o => o.trim().replace(/\/+$/, ''))
   : ['http://localhost:5173'];
 
 app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (mobile apps, curl, Render health checks)
     if (!origin) return callback(null, true);
-    if (allowedOrigins.includes('*') || allowedOrigins.includes(origin)) {
+    const cleanOrigin = origin.replace(/\/+$/, '');
+    if (
+      allowedOrigins.includes('*') || 
+      allowedOrigins.includes(cleanOrigin) ||
+      cleanOrigin.endsWith('.vercel.app') ||
+      cleanOrigin.includes('localhost')
+    ) {
       return callback(null, true);
     }
     return callback(new Error(`CORS: origin ${origin} not allowed`));
