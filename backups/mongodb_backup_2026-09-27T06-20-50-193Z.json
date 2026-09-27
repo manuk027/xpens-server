@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "app": "SpendWise / xpens",
+    "version": "2.0.0",
+    "exportedAt": "2026-09-27T06:20:50.193Z",
+    "transactionCount": 2,
+    "budgetCount": 2
+  },
+  "transactions": [
+    {
+      "_id": "6ab8b1faccf96508c16b1dfd",
+      "title": "test",
+      "amount": 200,
+      "type": "expense",
+      "category": "Food & Dining",
+      "date": "2026-09-27",
+      "paymentMethod": "Cash",
+      "note": "this is a test input",
+      "createdAt": "2026-09-27T06:04:42.871Z",
+      "updatedAt": "2026-09-27T06:04:42.871Z",
+      "__v": 0
+    },
+    {
+      "_id": "6ab8b21dccf96508c16b1dff",
+      "title": "test income",
+      "amount": 200,
+      "type": "income",
+      "category": "Salary",
+      "date": "2026-09-27",
+      "paymentMethod": "Cash",
+      "note": "this is a test income",
+      "createdAt": "2026-09-27T06:05:17.320Z",
+      "updatedAt": "2026-09-27T06:05:17.320Z",
+      "__v": 0
+    }
+  ],
+  "budgets": [
+    {
+      "_id": "6ab2aad1c4b80f3328e6ffca",
+      "monthlyLimit": 20000,
+      "currency": "₹",
+      "currencyCode": "INR (₹)",
+      "createdAt": "2026-09-22T16:20:33.769Z",
+      "updatedAt": "2026-09-22T16:20:33.769Z",
+      "__v": 0
+    },
+    {
+      "_id": "6ab8b4f06099ba1fbef56cf0",
+      "userEmail": "default",
+      "monthlyLimit": 20000,
+      "currency": "₹",
+      "currencyCode": "INR (₹)",
+      "createdAt": "2026-09-27T06:17:20.327Z",
+      "updatedAt": "2026-09-27T06:17:20.327Z",
+      "__v": 0
+    }
+  ]
+}

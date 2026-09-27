@@ -1,0 +1,25 @@
+{
+  "name": "expense-tracker-server",
+  "version": "1.1.0",
+  "description": "Express and MongoDB backend for Expense Tracker",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:check": "node scripts/dbManager.js check",
+    "db:indexes": "node scripts/dbManager.js indexes",
+    "db:seed": "node scripts/dbManager.js seed",
+    "db:backup": "node scripts/dbManager.js backup",
+    "db:restore": "node scripts/dbManager.js restore"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.4.1",
+    "nodemailer": "^10.0.10"
+  }
+}
